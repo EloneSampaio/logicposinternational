@@ -46,7 +46,7 @@ namespace logicpos.Classes.Gui.Gtk.Pos.Dialogs
                 //ResponseTypeOk
                 else if (pResponse == ResponseType.Ok)
                 {
-					//TK016249 - Impressoras - Diferenciação entre Tipos
+                    //TK016249 - Impressoras - Diferenciação entre Tipos
                     GlobalFramework.UsingThermalPrinter = true;
                     //SaveOrUpdateCustomer Before use _selectedCustomer (Can be null)
                     resultObject = Utils.SaveOrUpdateCustomer(
@@ -529,7 +529,7 @@ namespace logicpos.Classes.Gui.Gtk.Pos.Dialogs
                 {
                     customerGuid = FrameworkUtils.GetGuidFromQuery(sql);
                 }
-
+                _log.Debug(customerGuid);
                 if (customerGuid != Guid.Empty)
                 {
                     _selectedCustomer = (erp_customer)FrameworkUtils.GetXPGuidObject(typeof(erp_customer), customerGuid);
@@ -558,7 +558,7 @@ namespace logicpos.Classes.Gui.Gtk.Pos.Dialogs
                     _entryBoxCustomerCity.EntryValidation.Text = (_selectedCustomer.City != null) ? _selectedCustomer.City.ToString() : string.Empty;
                     _entryBoxSelectCustomerCountry.Value = _selectedCountry;
                     _entryBoxSelectCustomerCountry.EntryValidation.Text = (_selectedCountry != null) ? _selectedCountry.Designation : string.Empty;
-                    _entryBoxCustomerNotes.EntryValidation.Text = (_selectedCustomer.Notes != null) ? _selectedCustomer.Notes.ToString() : string.Empty;
+                    //_entryBoxCustomerNotes.EntryValidation.Text = (_selectedCustomer.Notes != null) ? _selectedCustomer.Notes.ToString() : string.Empty;
                 }
                 //IN:009275 Use Euro VAT Info 
                 else if (Utils.UseVatAutocomplete())
@@ -1093,7 +1093,7 @@ namespace logicpos.Classes.Gui.Gtk.Pos.Dialogs
             _partialPaymentEnabled = pIsPartialPayment;
             // Commented to Prevend Cleaning _totalDelivery and _totalChange
             //Shared: Update Total Delivery and TotalChange 
-            if (pResetPaymentMethodButton) 
+            if (pResetPaymentMethodButton)
             {
                 _totalDelivery = 0;
                 _totalChange = 0;

@@ -48,8 +48,9 @@ namespace logicpos
         {
             try
             {
-                //Get ConfigurationPreferenceParameter Values to Check if Plataform is Inited
-                cfg_configurationpreferenceparameter configurationPreferenceParameterCompanyCountryOid = (FrameworkUtils.GetXPGuidObjectFromCriteria(typeof(cfg_configurationpreferenceparameter), string.Format("(Disabled IS NULL OR Disabled  <> 1) AND (Token = '{0}')", "COMPANY_COUNTRY_OID")) as cfg_configurationpreferenceparameter);
+                _log.Debug("iniciando initplataformparametrs");
+               //Get ConfigurationPreferenceParameter Values to Check if Plataform is Inited
+               cfg_configurationpreferenceparameter configurationPreferenceParameterCompanyCountryOid = (FrameworkUtils.GetXPGuidObjectFromCriteria(typeof(cfg_configurationpreferenceparameter), string.Format("(Disabled IS NULL OR Disabled  <> 1) AND (Token = '{0}')", "COMPANY_COUNTRY_OID")) as cfg_configurationpreferenceparameter);
                 cfg_configurationpreferenceparameter configurationPreferenceParameterSystemCurrencyOid = (FrameworkUtils.GetXPGuidObjectFromCriteria(typeof(cfg_configurationpreferenceparameter), string.Format("(Disabled IS NULL OR Disabled  <> 1) AND (Token = '{0}')", "SYSTEM_CURRENCY_OID")) as cfg_configurationpreferenceparameter);
                 cfg_configurationpreferenceparameter configurationPreferenceParameterCompanyCountryCode2 = (FrameworkUtils.GetXPGuidObjectFromCriteria(typeof(cfg_configurationpreferenceparameter), string.Format("(Disabled IS NULL OR Disabled  <> 1) AND (Token = '{0}')", "COMPANY_COUNTRY_CODE2")) as cfg_configurationpreferenceparameter);
                 cfg_configurationpreferenceparameter configurationPreferenceParameterCompanyFiscalNumber = (FrameworkUtils.GetXPGuidObjectFromCriteria(typeof(cfg_configurationpreferenceparameter), string.Format("(Disabled IS NULL OR Disabled  <> 1) AND (Token = '{0}')", "COMPANY_FISCALNUMBER")) as cfg_configurationpreferenceparameter);
@@ -189,7 +190,7 @@ namespace logicpos
                         WHERE 
                             (Disabled IS NULL or Disabled <> 1)
                     ";
-
+                    _log.Debug("LabelCreate meio aqui1");
                     _tablePadUser = new TablePad(
                         sqlTablePadUser,
                         "ORDER BY Ord",
@@ -208,20 +209,26 @@ namespace logicpos
                     _tablePadUser.SourceWindow = this;
                     _tablePadUser.Clicked += _tablePadUser_Clicked;
 
+                   
                     //Put in Fix
                     if (tablePadUserVisible)
                     {
+                        _log.Debug("LabelCreate meio aqui1");
                         fix.Put(tablePadUserButtonPrev, tablePadUserButtonPrevPosition.X, tablePadUserButtonPrevPosition.Y);
+                        _log.Debug("LabelCreate meio aqui2");
                         fix.Put(tablePadUserButtonNext, tablePadUserButtonNextPosition.X, tablePadUserButtonNextPosition.Y);
+                        _log.Debug("LabelCreate meio aqui3");
                         fix.Put(_tablePadUser, tablePadUserPosition.X, tablePadUserPosition.Y);
                     }
 
+                   
                     //Label Version
                     string appVersion = string.Format(logicpos.App.SettingsApp.AppSoftwareVersionFormat, FrameworkUtils.ProductVersion);
                     if(GlobalFramework.LicenceReseller != null && GlobalFramework.LicenceReseller.ToString().ToLower() != "logicpulse" && GlobalFramework.LicenceReseller.ToString().ToLower() != "")
                     {
-                        appVersion = string.Format("Brough by {1}\n{0}",appVersion, GlobalFramework.LicenceReseller);
+                        appVersion = string.Format("Licenciado por {1}\n{0}",appVersion, GlobalFramework.LicenceReseller);
                     }
+                   
                     Label labelVersion = new Label(appVersion);
                     Pango.FontDescription fontDescLabelVersion = Pango.FontDescription.FromString(labelVersionFont);
                     labelVersion.ModifyFg(StateType.Normal, labelVersionFontColor);
@@ -231,9 +238,11 @@ namespace logicpos
                     labelVersion.HeightRequest = 50;
                     labelVersion.SetAlignment(0.5F, 0.5F);
 
-                    //Put in Fix
-                    fix.Put(labelVersion, labelVersionPosition.X, labelVersionPosition.Y);
+                 
 
+                   //Put in Fix
+                   fix.Put(labelVersion, labelVersionPosition.X, labelVersionPosition.Y);
+                    _log.Debug("LabelCreate terminado");
                     //Developer Dialog - Enabled / Disable Developer Button
 #if (DEBUG)
                     bool buttonDeveloperEnabled = true;

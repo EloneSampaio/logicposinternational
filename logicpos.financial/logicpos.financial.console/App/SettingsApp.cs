@@ -67,9 +67,9 @@ namespace logicpos.financial.console.App
 
         //Payment Documents
         //RC RC5TEHDX4012016S001/3 - Recibo - Eur
-        public static Guid XpoPrintFinanceDocumentPayment = new Guid("60fc3747-8859-44a1-a2a4-ee46d7a24f19");
-        //RC RC5TEHDX4012016S001/4 - Recibo - Kwanza
-        //public static Guid XpoPrintFinanceDocumentPayment = new Guid("200f1f5b-0bf0-455d-acf5-7f289f4531b6");
+        //public static Guid XpoPrintFinanceDocumentPayment = new Guid("60fc3747-8859-44a1-a2a4-ee46d7a24f19");
+        //RC RC5TEHDX4012016S001/4 - Recibo - Kwanza mudei aqui
+        public static Guid XpoPrintFinanceDocumentPayment = new Guid("200f1f5b-0bf0-455d-acf5-7f289f4531b6");
         
         //OrderMain/Tickets
         public static Guid XpoPrintDocumentOrderTicket = new Guid("e936c649-14a4-4190-8144-d23848f7b504");

@@ -154,7 +154,7 @@ namespace logicpos.Classes.Gui.Gtk.Widgets
                 if (_filter != string.Empty) { executeSql = _sql + _filter; } else { executeSql = _sql; };
                 if (_order != string.Empty) { executeSql += _order; };
                 executeSql = string.Format("{0};", FrameworkUtils.RemoveCarriageReturnAndExtraWhiteSpaces(executeSql));
-                //_log.Debug(string.Format("TablePad(): executeSql: [{0}]", executeSql));
+                _log.Debug(string.Format("TablePad(): executeSql: [{0}]", executeSql));
 
                 //Always clear listItems
                 if (_listButtons.Count > 0) _listButtons.Clear();
@@ -176,8 +176,10 @@ namespace logicpos.Classes.Gui.Gtk.Widgets
                     string[] nonPropertyFields = { "label" };
                     // Unencrypt selectStatementResultData encrypted properties
                     selectStatementResultData = XPGuidObject.DecryptSelectStatementResults(typeof(sys_userdetail), selectStatementResultMeta, selectStatementResultData, nonPropertyFields);
+                    _log.Debug(string.Format("InitializeButton()"));
                 }
 
+               
                 //Create a FieldIndex to Get Values From FieldNames
                 int i = 0;
                 _fieldIndex = new Dictionary<string, int>();
@@ -215,6 +217,8 @@ namespace logicpos.Classes.Gui.Gtk.Widgets
                             _strButtonImage = (_resultRow.Values[_fieldIndex["image"]] != null && _resultRow.Values[_fieldIndex["image"]].ToString() != string.Empty) ? FrameworkUtils.OSSlash(_resultRow.Values[_fieldIndex["image"]].ToString()) : "";
                             if (_strButtonLabel.Length > _posBaseButtonMaxCharsPerLabel) { _strButtonLabel = _strButtonLabel.Substring(0, _posBaseButtonMaxCharsPerLabel) + "."; };
 
+                         
+
                             //Initialize Button
                             buttonCurrent = InitializeButton();
 
@@ -229,6 +233,7 @@ namespace logicpos.Classes.Gui.Gtk.Widgets
                                 //Always assign selected reference to SelectedButton
                                 _selectedButton = buttonCurrent;
                             }
+
 
                             //Childs
                             if (_fieldIndex.ContainsKey("childs"))
@@ -262,7 +267,7 @@ namespace logicpos.Classes.Gui.Gtk.Widgets
                         _totalPages = (int)Math.Ceiling((float)_totalItems / (float)_itemsPerPage);
 
                         //Debug
-                        //_log.Debug(string.Format("UpdateSql(): totalItems: [{0}], itemsPerPage: [{1}], totalPages: [{2}]", _totalItems, _itemsPerPage, _totalPages));
+                        _log.Debug(string.Format("UpdateSql(): totalItems: [{0}], itemsPerPage: [{1}], totalPages: [{2}]", _totalItems, _itemsPerPage, _totalPages));
 
                         Update();
                     }

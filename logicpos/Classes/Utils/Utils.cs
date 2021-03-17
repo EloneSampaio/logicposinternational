@@ -2300,12 +2300,15 @@ namespace logicpos
                 sortProperty[0] = new SortProperty("CreatedAt", SortingDirection.Ascending);
                 sortProperty[1] = new SortProperty("Ord", SortingDirection.Ascending);
                 XPCollection xpcSystemNotification = new XPCollection(pSession, typeof(sys_systemnotification), criteriaOperator, sortProperty);
+                _log.Debug("xpcSystemNotification.Count");
+                
 
                 if (xpcSystemNotification.Count > 0)
                 {
                     foreach (sys_systemnotification item in xpcSystemNotification)
                     {
                         message = string.Format("{1}{0}{0}{2}", Environment.NewLine, item.CreatedAt, item.Message);
+                        _log.Debug(item.Message);
                         ResponseType response = Utils.ShowMessageTouch(
                           pSourceWindow,
                           DialogFlags.DestroyWithParent | DialogFlags.Modal,

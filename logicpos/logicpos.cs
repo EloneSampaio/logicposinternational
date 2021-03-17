@@ -131,6 +131,7 @@ namespace logicpos
                     {
                         // Launch Scripts
                         SettingsApp.firstBoot = true;
+                        //criar database
                         databaseCreated = DataLayer.CreateDatabaseSchema(xpoConnectionString, GlobalFramework.DatabaseType, GlobalFramework.DatabaseName);                        
                     }
                     catch (Exception ex)

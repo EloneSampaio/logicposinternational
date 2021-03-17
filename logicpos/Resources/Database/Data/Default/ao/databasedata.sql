@@ -1023,7 +1023,7 @@ INSERT INTO erp_customertype (Oid,Ord,Code,Designation) VALUES ('ca2e73ba-5cac-4
 UPDATE erp_customertype SET UpdatedBy = '090c5684-52ba-4d7a-8bc3-a00320ef503d', CreatedAt = '2014-02-28 14:02:28', UpdatedAt = '2019-03-11 23:16:18';
 
 -- Encrypted : Will be Updated by Vendor Plugin Script;
-INSERT INTO erp_customer (Oid,Ord,Code,CodeInternal,Name,FiscalNumber,CardNumber,Address,Locality,ZipCode,City,Country,Discount,PriceType,CustomerType) VALUES ('0cf40622-578b-417d-b50f-e945fefb5d68',10,10,'0cf40622-578b-417d-b50f-e945fe','Consumidor Final','999999990',NULL,'Desconhecido','Desconhecido','1000-000','Indefinido','e7e8c325-a0d4-4908-b148-508ed750676a',0,'cf17a218-b687-4b82-a8f4-0905594ac1f5','a4b3811f-9851-430d-810e-f8be7ac3f392');
+INSERT INTO erp_customer (Oid,Ord,Code,CodeInternal,Name,FiscalNumber,CardNumber,Address,Locality,ZipCode,City,Country,Discount,PriceType,CustomerType) VALUES ('0cf40622-578b-417d-b50f-e945fefb5d68',10,10,'0cf40622-578b-417d-b50f-e945fe','Consumidor Final','999999990',NULL,'Desconhecido','Desconhecido','1000-000','Indefinido','9655510a-ff58-461e-9719-c037058f10ed',0,'cf17a218-b687-4b82-a8f4-0905594ac1f5','a4b3811f-9851-430d-810e-f8be7ac3f392');
 UPDATE erp_customer SET UpdatedBy = '090c5684-52ba-4d7a-8bc3-a00320ef503d', CreatedAt = '2014-02-28 14:02:28', UpdatedAt = '2019-03-11 23:16:18';
 
 INSERT INTO erp_customerdiscountgroup (Oid,Ord,Code,Designation) VALUES ('72dfb8e2-3a48-4d01-8800-8d497e599fbe',10,10,'Mínimo');

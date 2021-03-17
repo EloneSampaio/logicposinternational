@@ -52,11 +52,10 @@ namespace logicpos.shared.App
         //Country : for Country Finance Rules
 
         //Defaults if Not Defined in Config
-        public static Guid XpoOidConfigurationCountryPortugal = new Guid("9655510a-ff58-461e-9719-c037058f10ed");
-        public static string XpoOidConfigurationCountryPortugalCode2 = "AO";
-        public static Guid XpoOidConfigurationCurrencyEuro = new Guid("28da9212-3423-11e4-96ce-00ff2353398c");
+        public static Guid XpoOidConfigurationCountryPortugal = new Guid("e7e8c325-a0d4-4908-b148-508ed750676a");
+        public static string XpoOidConfigurationCountryPortugalCode2 = "PT";
+        public static Guid XpoOidConfigurationCurrencyEuro = new Guid("28dd2a3a-0083-11e4-96ce-00ff2353398c");
         public static cfg_configurationcurrency ConfigurationSystemCurrency = null;//Assigned on InitPlataformParameters()
-
         /* IN005975 and IN005979 for Mozambique deployment */
         /// <summary>
         /// Mozambique Oid

@@ -29,7 +29,7 @@ namespace logicpos.App
         //Disable > public static string AppHardwareId = null;
         public static string AppHardwareId = "92A4-EADD-8AF0-B693-DBD0-2A22";
 #else
-        public static bool LicenceRegistered = false;
+        public static bool LicenceRegistered = true;
         public static string DatabaseName = "logicposdb";
         public static bool ProtectedFilesIgnoreProtection = true;
         public static bool XPOCreateDatabaseAndSchema = false;
@@ -235,7 +235,7 @@ namespace logicpos.App
             /// </example>
             //result.Add(@"Resources\Reports\UserReports\ReportDocumentFinance.pt-PT.frx");
             //result.Add(@"Resources\Reports\UserReports\ReportDocumentFinance.pt-MZ.frx");
-            //result.Add(@"Resources\Reports\UserReports\ReportDocumentFinance.pt-AO.frx");
+            result.Add(@"Resources\Reports\UserReports\ReportDocumentFinance.pt-AO.frx"); //mudei aqui
             result.Add(@"Resources\Reports\UserReports\ReportDocumentFinancePayment.frx");
             result.Add(@"Resources\Reports\UserReports\ReportDocumentFinanceWayBill.frx");
             result.Add(@"Resources\Reports\UserReports\ReportTest.frx");

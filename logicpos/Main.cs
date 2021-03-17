@@ -213,10 +213,10 @@ namespace logicpos
                 {
                     string sql = "SELECT value FROM cfg_configurationpreferenceparameter where token = 'CULTURE';";
                     GlobalFramework.SessionXpo = Utils.SessionXPO();
-                    string getCultureFromDB = GlobalFramework.SessionXpo.ExecuteScalar(sql).ToString();                    
+                    string getCultureFromDB = null; //GlobalFramework.SessionXpo.ExecuteScalar(sql).ToString();                    
                     if (!Utils.getCultureFromOS(getCultureFromDB))
                     {
-                        GlobalFramework.CurrentCulture = new CultureInfo("pt-PT");
+                        GlobalFramework.CurrentCulture = new CultureInfo("pt-AO");
                         GlobalFramework.Settings["customCultureResourceDefinition"] = ConfigurationManager.AppSettings["customCultureResourceDefinition"]; 
                     }
                     else
@@ -232,7 +232,7 @@ namespace logicpos
 
                 if (!Utils.getCultureFromOS(ConfigurationManager.AppSettings["customCultureResourceDefinition"]))
                 {
-                    GlobalFramework.CurrentCulture = new CultureInfo("pt-PT");
+                    GlobalFramework.CurrentCulture = new CultureInfo("pt-AO");
                     GlobalFramework.Settings["customCultureResourceDefinition"] = ConfigurationManager.AppSettings["customCultureResourceDefinition"];
                 }
                 else

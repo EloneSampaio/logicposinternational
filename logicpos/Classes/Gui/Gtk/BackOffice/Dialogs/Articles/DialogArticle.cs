@@ -67,10 +67,15 @@ namespace logicpos.Classes.Gui.Gtk.BackOffice
                     }
                     else if (GlobalFramework.DatabaseType.ToString() == "MySql")
                     {
-                        string lastArticleSql = string.Format("SELECT MAX(CAST(code AS UNSIGNED)) as Cast FROM fin_article;");
+                        //quando a tabela fin_article está vazia o código abaixo retorna null causando uma excepcion
+                        //para resolver usei o COALESCE(MAX..,0) como explica o texto no link abaixo
+                        //www.tutorialspoint.com/how-to-avoid-null-result-of-select-max-rank-from-test-for-an-empty-table
+                        string lastArticleSql = string.Format("SELECT COALESCE(MAX(CAST(code AS UNSIGNED)),0) as Cast FROM fin_article;");
+
                         lastArticleCode = GlobalFramework.SessionXpo.ExecuteScalar(lastArticleSql).ToString();
+
                     }
-                        
+
                 }
                 catch (Exception ex)
                 {

@@ -251,7 +251,7 @@ namespace luaitech.softwarevendor.plugin
             bool debug = false;
             string removeLocationPrefix = "Resources/Reports/UserReports/";
             string reportName = filePath.Replace(removeLocationPrefix, string.Empty);
-            string resourceBaseLocation = "logicpulse.softwarevendor.plugin.Resources.Reports.UserReports.{0}";
+            string resourceBaseLocation = "amce.softwarevendor.plugin.Resources.Reports.UserReports.{0}";
             string resourceTemplateLocation = string.Format(resourceBaseLocation, templateBase);
             string resourceReportLocation = string.Format(resourceBaseLocation, reportName);
 
@@ -308,7 +308,7 @@ namespace luaitech.softwarevendor.plugin
         {
              bool debug = false;
             string resourcePathLocation = "Resources/Reports/UserReports/";
-            string resourceBaseLocation = "acme.softwarevendor.plugin.Resources.Reports.UserReports.{0}";
+            string resourceBaseLocation = "luaitech.softwarevendor.plugin.Resources.Reports.UserReports.{0}";
             string resourceLocation = string.Empty;
             string[] files = Directory.GetFiles(resourcePathLocation, "*.frx");
             List<string> emmbededFilesMissing = new List<string>();

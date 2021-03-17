@@ -72,7 +72,11 @@ namespace logicpos
             try
             {
                 byte[] keyArray;
-                byte[] toEncryptArray = Convert.FromBase64String(cipherString);
+            //    string converted = pKey.Replace('-', '+');
+              //  converted = converted.Replace('_', '/');
+                //byte[] converted = UnicodeEncoding.Unicode.GetBytes(cipherString);
+              //  byte[] toEncryptArray = Convert.ToBase64String(converted);
+                  byte[] toEncryptArray = Convert.FromBase64String(cipherString);
 
                 if (useHashing)
                 {
@@ -100,6 +104,7 @@ namespace logicpos
             {
                 // If STOP Here in this BreakPoint, maybe you are working on Internal Solution with a Opensource ACME Plugin/Database or ViceVersa
                 // If so, delete AcmeSoftwareVendorPlugin.* plugins and Debug Again
+                log.Debug(ex.StackTrace, ex);
                 log.Error(ex.Message, ex);
             }
 

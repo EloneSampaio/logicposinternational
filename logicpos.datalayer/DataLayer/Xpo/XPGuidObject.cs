@@ -473,7 +473,9 @@ namespace logicpos.datalayer.DataLayer.Xpo
                             if ((row.Values[i] != null))
                             {
                                 columnValue = row.Values[i].ToString();
+                              
                                 columnValueDecrypted = SettingsApp.PluginSoftwareVendor.Decrypt(columnValue);
+                                log.Debug($"Detected Encrypted Column ColumName: [{columnName}], ColumnValue: [{columnValue}], ColumnValueDecrypted: [{columnValueDecrypted}]");
                                 if (debug) log.Debug($"Detected Encrypted Column ColumName: [{columnName}], ColumnValue: [{columnValue}], ColumnValueDecrypted: [{columnValueDecrypted}]");
                                 // Replace Original Value
                                 row.Values[i] = columnValueDecrypted;
@@ -487,6 +489,7 @@ namespace logicpos.datalayer.DataLayer.Xpo
                 log.Error(ex.Message, ex);
             }
 
+            log.Debug(string.Format("InitializeButton(1)"));
             return result;
         }
 
