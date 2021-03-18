@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <inherited BaseReport="TemplateBase.frx" ScriptLanguage="CSharp" ReportInfo.Name="RC RC5TEHDX4012016S001/3" ReportInfo.Created="12/31/2014 10:16:52" ReportInfo.Modified="07/05/2019 09:59:22" ReportInfo.CreatorVersion="2018.1.4.0" PrintSettings.CopyNames="Original&#13;&#10;Duplicado">
-  <ScriptText>
+<ScriptText>
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -17,13 +17,13 @@
 
     namespace FastReport
     {
-    public class ReportScript
-    {
-    private void PageHeader1_BeforePrint(object sender, EventArgs e)
-    {
-    PictureCompanyLogo.ImageLocation = (string)Report.GetParameterValue(&quot;Report_FileName_Logo&quot;);
-    }
-    }
+		public class ReportScript
+		{
+			      private void PageHeader1_BeforePrint(object sender, EventArgs e)
+					  {
+						PictureCompanyLogo.ImageLocation = (string)Report.GetParameterValue(&quot;Report_FileName_Logo&quot;);
+					  }
+		}
 
     }
   </ScriptText>
@@ -36,6 +36,7 @@
       <Column Name="PaymentRefNo" DataType="System.String"/>
       <Column Name="PaymentStatus" DataType="System.String"/>
       <Column Name="PaymentAmount" DataType="System.Decimal"/>
+      <Column Name="TaxPayable" DataType="System.String"/>
       <Column Name="PaymentDate" DataType="System.String"/>
       <Column Name="DocumentDate" DataType="System.String"/>
       <Column Name="ExtendedValue" DataType="System.String"/>
@@ -136,8 +137,10 @@
       <TextObject Name="TextInWordsValue" Left="5.45" Top="171.55" Width="566.55" Height="18.35" Text="[ExtendedValue([DocumentFinancePayment.PaymentAmount]*[DocumentFinancePayment.ExchangeRate], [DocumentFinancePayment.CurrencyDesignation])]" Padding="2, 2, 2, 2" Font="Arial, 9pt" Wysiwyg="true"/>
       <TextObject Name="LabelInWordsValue" Left="5.45" Top="158.65" Width="566.55" Height="11.9" Text="[Res(&quot;global_total_extended_label&quot;)]" WordWrap="false" Font="Arial, 7pt, style=Bold"/>
       <ShapeObject Name="Shape3" Left="583.45" Top="151.2" Width="135.43" Height="122.85" Border.Color="Silver" Fill="Glass" Fill.Color="Transparent" Fill.Blend="0.2" Fill.Hatch="true"/>
-      <TextObject Name="LabelTotalNet" Left="590.9" Top="160.65" Width="118.2" Height="17.9" Text="[Res(&quot;global_totalnet&quot;)]" Padding="2, 2, 2, 2" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt, style=Bold" Wysiwyg="true"/>
-      <TextObject Name="TextTotalNet" Left="590.9" Top="179.55" Width="118.2" Height="17.9" Text="[ToDecimal([DocumentFinancePayment.PaymentAmount]*[DocumentFinancePayment.ExchangeRate])]" Padding="2, 2, 2, 2" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator=" " Format.NegativePattern="1" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt" Wysiwyg="true"/>
+      <TextObject Name="LabelTotalTax" Left="590.81" Top="160.65" Width="118.2" Height="17.9" Text="[Res(&quot;global_documentfinance_totaltax&quot;)]" Padding="2, 2, 2, 2" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt, style=Bold" Wysiwyg="true"/>
+      <TextObject Name="TextTotalTax" Left="590.81" Top="179.55" Width="118.2" Height="17.9" Text="[ToDecimal([DocumentFinancePayment.TaxPayable])]" Padding="2, 2, 2, 2" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator=" " Format.NegativePattern="1" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt" Wysiwyg="true"/>
+      <TextObject Name="LabelTotalNet" Left="590.9" Top="217.35" Width="118.2" Height="17.9" Text="[Res(&quot;global_totalnet&quot;)]" Padding="2, 2, 2, 2" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt, style=Bold" Wysiwyg="true"/>
+      <TextObject Name="TextTotalNet" Left="590.9" Top="236.25" Width="118.2" Height="17.9" Text="[ToDecimal([DocumentFinancePayment.PaymentAmount]*[DocumentFinancePayment.ExchangeRate])]" Padding="2, 2, 2, 2" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator=" " Format.NegativePattern="1" HorzAlign="Right" WordWrap="false" Font="Arial, 9pt" Wysiwyg="true"/>
     </ReportSummaryBand>
     <inherited Name="PageFooter1" Top="603.55" Border.Color="Silver">
       <inherited Name="TextFooter1"/>

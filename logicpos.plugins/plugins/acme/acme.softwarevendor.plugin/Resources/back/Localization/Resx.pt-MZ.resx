@@ -345,17 +345,17 @@ Ou selecione '{2}' para iniciar o POS em resolução '1024x768'.</value>
   <data name="dialog_edit_DocumentFinanceSeries_tab1_label" xml:space="preserve">
     <value>Séries dos Documentos Fiscais</value>
   </data>
+  <data name="dialog_message_article_without_vat_exception_reason_detected" xml:space="preserve">
+    <value>Para criar documentos fiscais contendo artigos isentos de IVA, associe a taxa de insenção do artigo no backoffice.</value>
+  </data>
   <data name="dialog_message_article_already_paid" xml:space="preserve">
     <value>O ticket que está a tentar pagar já foi pago.</value>
   </data>
   <data name="dialog_message_article_already_exited" xml:space="preserve">
     <value>O ticket que está a tentar pagar já foi pago e já deu saida.</value>
   </data>
-  <data name="dialog_message_article_without_vat_exception_reason_detected" xml:space="preserve">
-    <value>Para criar documentos fiscais contendo artigos isentos de IVA, associe a taxa de insenção do artigo no backoffice.</value>
-  </data>
   <data name="dialog_message_cant_create_cc_document_with_default_entity" xml:space="preserve">
-    <value>Não pode criar documentos de entrada de conta corrente com o cliente consumidor final ou com um cliente sem nome/NIF!
+    <value>Não pode criar documentos de entrada de conta corrente com o cliente consumidor final ou com um cliente sem nome/NUIT!
 Use um cliente válido e tente novamente.</value>
   </data>
   <data name="dialog_message_cashdrawer_money_out_error" xml:space="preserve">
@@ -374,8 +374,7 @@ Diferença: {2}</value>
     <value>Caixa Registadora aberta com sucesso!</value>
   </data>
   <data name="dialog_message_customer_fiscal_number_exists" xml:space="preserve">
-    <value>NIF já registado no sistema!
-Por favor, insira outro número e tente novamente.</value>
+    <value>NUIT já registado no sistema! Por favor, insira outro número e tente novamente.</value>
     <comment>Message for existent Fiscal Number, when registering/editing a customer</comment>
   </data>
   <data name="dialog_message_customer_updated_save_changes" xml:space="preserve">
@@ -666,7 +665,7 @@ Algumas das séries já foram usadas, use outro acrónimo para gerar séries nov
   </data>
   <data name="dialog_message_series_fiscal_year_close_current" xml:space="preserve">
     <value>De momento existe um ano fiscal activo [{0}]. 
-Para continuar e iniciar um novo ano fiscal, tem que fechar o ano fiscal activo
+Para continuar e iniciar um novo ano fiscal,  tem que fechar o ano fiscal activo
 Nota: Esta operação fechará o ano fiscal activo e não poderá ser anulada!
 Tem a certeza que deseja continuar e fechar ano fiscal activo e criar um novo?</value>
   </data>
@@ -731,14 +730,14 @@ Para continuar use um cliente com os dados obrigatórios preenchidos.
 Nome, Morada, Código Postal, Cidade, País e Número Único de Identificação Tributária.</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value" xml:space="preserve">
-    <value>O valor do documento excede o limite máximo definido para as vendas a dinheiro.
+    <value>O valor do documento excede o limite máximo definido para as faturas simplificadas.
 
 {0}
 
 {1}</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value_mode_paymentdialog" xml:space="preserve">
-    <value>Deseja emitir uma Fatura-Recibo em vez da Venda a Dinheiro?</value>
+    <value>Deseja emitir uma Fatura-Recibo em vez da Fatura Simplificada?</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value_mode_paymentdialog_documentfinancedialog" xml:space="preserve">
     <value>Para continuar selecione outro tipo de documento fiscal.</value>
@@ -1202,7 +1201,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Grupo de descontos</value>
   </data>
   <data name="global_customer_fiscal_number" xml:space="preserve">
-    <value>NIF Cliente</value>
+    <value>NUIT Cliente</value>
   </data>
   <data name="global_customer_types" xml:space="preserve">
     <value>Tipo de clientes</value>
@@ -1328,7 +1327,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Tipos de documentos</value>
   </data>
   <data name="global_documentfinance_type_report_invoice_footer_at" xml:space="preserve">
-    <value>Os bens/serviços foram colocados à disposição do adquirente na data do documento</value>
+    <value>Os artigos faturados foram colocados à exposição do cliente nesta data</value>
   </data>
   <data name="global_documentfinance_type_report_non_invoice_footer_at" xml:space="preserve">
     <value>Este documento não serve de fatura</value>
@@ -1546,10 +1545,10 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Modelo financeiro</value>
   </data>
   <data name="global_fiscal_number" xml:space="preserve">
-    <value>NIF</value>
+    <value>NUIT</value>
   </data>
   <data name="global_fiscal_number_acronym" xml:space="preserve">
-    <value>NIF</value>
+    <value>NUIT</value>
   </data>
   <data name="global_fiscal_year" xml:space="preserve">
     <value>Ano fiscal</value>
@@ -1830,7 +1829,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Impresso</value>
   </data>
   <data name="global_printed_on_date" xml:space="preserve">
-    <value>A data de emissão</value>
+    <value>Impresso em</value>
   </data>
   <data name="global_printers" xml:space="preserve">
     <value>Impressoras</value>
@@ -2007,7 +2006,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Relatórios</value>
   </data>
   <data name="global_report_overlay_software_certification" xml:space="preserve">
-    <value>{0} por programa certificado Nº {1}/AT</value>
+    <value>{0} || Autorização da AT: {1}</value>
     <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
   </data>
   <data name="global_report_overlay_software_certification_emitted" xml:space="preserve">
@@ -2019,7 +2018,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
   </data>
   <data name="global_report_overlay_software_certification_processed" xml:space="preserve">
-    <value>Processado</value>
+    <value>Processado por computador</value>
     <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
   </data>
   <data name="global_report_overlay_software_certification_short" xml:space="preserve">
@@ -2120,9 +2119,6 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
   </data>
   <data name="global_source_finance_document" xml:space="preserve">
     <value>Documento de Origem</value>
-  </data>
-  <data name="global_source_document_NC_ND" xml:space="preserve">
-    <value>Anulação ou rectificação do documento de origem</value>
   </data>
   <data name="global_split_account" xml:space="preserve">
     <value>Dividir conta</value>
@@ -2231,7 +2227,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Total Débito</value>
   </data>
   <data name="global_total_deliver" xml:space="preserve">
-    <value>Total Entregue</value>
+    <value>Total entregue</value>
   </data>
   <data name="global_total_discount_acronym" xml:space="preserve">
     <value>T.Dsc</value>
@@ -2255,7 +2251,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>"Item total with tax" label for documents</comment>
   </data>
   <data name="global_total_price_to_pay" xml:space="preserve">
-    <value>Total a Pagar</value>
+    <value>Total a pagar</value>
   </data>
   <data name="global_total_stock" xml:space="preserve">
     <value>Total Stock</value>
@@ -2619,11 +2615,11 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_cent" xml:space="preserve">
-    <value>Cêntimo</value>
+    <value>Centavo</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_cents" xml:space="preserve">
-    <value>Cêntimos</value>
+    <value>Centavos</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_space_and" xml:space="preserve">
@@ -2898,7 +2894,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Fax</value>
   </data>
   <data name="prefparam_company_fiscalnumber" xml:space="preserve">
-    <value>NIF</value>
+    <value>Número Fiscal</value>
   </data>
   <data name="prefparam_company_mobilephone" xml:space="preserve">
     <value>Telemóvel</value>
@@ -3043,7 +3039,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Aplicação :: Usar o POS PDF Viewer para abrir ficheiros PDF</value>
   </data>
   <data name="prefparam_use_vat_autocomplete" xml:space="preserve">
-    <value>Aplicação :: Usar NIF para Auto-completar Campos</value>
+    <value>Aplicação :: Usar NUIT para Auto-completar Campos</value>
   </data>
   <data name="reporttype_label_type1" xml:space="preserve">
     <value>Relatórios Financeiros (Sumário)</value>
@@ -3540,11 +3536,11 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
   <data name="window_title_dialog_template" xml:space="preserve">
     <value>Modelo</value>
   </data>
-  <data name="window_title_dialog_update_POS" xml:space="preserve">
-    <value>Atualizar o POS para a versão: {0}</value>
-  </data>
   <data name="window_title_dialog_update_record" xml:space="preserve">
     <value>Atualizar Registo</value>
+  </data>
+  <data name="window_title_dialog_update_POS" xml:space="preserve">
+    <value>Atualizar o POS para a versão: {0}</value>
   </data>
   <data name="window_title_dialog_validation_error" xml:space="preserve">
     <value>Erro de validação</value>

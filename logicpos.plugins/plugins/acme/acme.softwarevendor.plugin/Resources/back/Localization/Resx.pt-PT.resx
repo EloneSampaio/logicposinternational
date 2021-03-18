@@ -236,7 +236,7 @@ Ou selecione '{2}' para iniciar o POS em resolução '1024x768'.</value>
     <value>Utilizador modificado: {0}</value>
   </data>
   <data name="audit_message_user_change_password" xml:space="preserve">
-    <value>Utilizador alterou a password: {0}</value>
+    <value>Utilizador alterou a palavra-passe: {0}</value>
   </data>
   <data name="audit_message_user_login" xml:space="preserve">
     <value>Login do utilizador: {0}</value>
@@ -250,6 +250,9 @@ Ou selecione '{2}' para iniciar o POS em resolução '1024x768'.</value>
   <data name="backoffice_datetime_format_status_bar" xml:space="preserve">
     <value>dddd, dd' de 'MMMM' de 'yyyy' || 'HH:mm:ss tt</value>
     <comment>Dateformat must have literal chars between single quotes</comment>
+  </data>
+  <data name="dialog_button_label_new_client" xml:space="preserve">
+    <value>Novo Cli.</value>
   </data>
   <data name="dialog_button_label_new_finance_documents" xml:space="preserve">
     <value>Novo Doc.</value>
@@ -328,7 +331,7 @@ Ou selecione '{2}' para iniciar o POS em resolução '1024x768'.</value>
     <value>Unidades de Tamanho</value>
   </data>
   <data name="dialog_edit_configurationvatrate_tab1_label" xml:space="preserve">
-    <value>Taxa de Imposto</value>
+    <value>VAT</value>
   </data>
   <data name="dialog_edit_CustomerDiscountGroup_tab1_label" xml:space="preserve">
     <value>Grupos de Desconto</value>
@@ -728,17 +731,17 @@ Movimento: {1}</value>
 
 Para continuar use um cliente com os dados obrigatórios preenchidos.
 
-Nome, Morada, Código Postal, Cidade, País e Número Único de Identificação Tributária.</value>
+Nome, Morada, Código Postal, Cidade, País e Número de Identificação Fiscal.</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value" xml:space="preserve">
-    <value>O valor do documento excede o limite máximo definido para as vendas a dinheiro.
+    <value>O valor do documento excede o limite máximo definido para as faturas simplificadas.
 
 {0}
 
 {1}</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value_mode_paymentdialog" xml:space="preserve">
-    <value>Deseja emitir uma Fatura-Recibo em vez da Venda a Dinheiro?</value>
+    <value>Deseja emitir uma Fatura-Recibo em vez da Fatura Simplificada?</value>
   </data>
   <data name="dialog_message_value_exceed_simplified_invoice_max_value_mode_paymentdialog_documentfinancedialog" xml:space="preserve">
     <value>Para continuar selecione outro tipo de documento fiscal.</value>
@@ -790,7 +793,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Dateformat must have literal chars between single quotes</comment>
   </data>
   <data name="global_accesspassword" xml:space="preserve">
-    <value>Pode alterar a password </value>
+    <value>Pode alterar a palavra-passe</value>
   </data>
   <data name="global_access_card_number" xml:space="preserve">
     <value>Número do cartão de acesso</value>
@@ -901,6 +904,10 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
   <data name="global_button_image" xml:space="preserve">
     <value>Imagem do botão</value>
   </data>
+  <data name="global_button_label_more" xml:space="preserve">
+    <value>_Mostrar Mais</value>
+    <comment>Load more registers</comment>
+  </data>
   <data name="global_button_label_cancel" xml:space="preserve">
     <value>_Cancelar</value>
   </data>
@@ -933,10 +940,6 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
   <data name="global_button_label_help" xml:space="preserve">
     <value>_Ajuda</value>
   </data>
-  <data name="global_button_label_more" xml:space="preserve">
-    <value>_Mostrar Mais</value>
-    <comment>Load more registers</comment>
-  </data>
   <data name="global_button_label_new_financial_document" xml:space="preserve">
     <value>_Novo</value>
   </data>
@@ -962,7 +965,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Pag.Parcial</value>
   </data>
   <data name="global_button_label_payment_dialog_split_payment" xml:space="preserve">
-    <value>Dividir </value>
+    <value>Dividir</value>
   </data>
   <data name="global_button_label_pay_invoice" xml:space="preserve">
     <value>Liquidar</value>
@@ -1076,7 +1079,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Data</value>
   </data>
   <data name="global_ConfigurationMaintenance_PasswordAccess" xml:space="preserve">
-    <value>Password de Acesso</value>
+    <value>Palavra-Passe de Acesso</value>
   </data>
   <data name="global_ConfigurationMaintenance_Remarks" xml:space="preserve">
     <value>Instruções</value>
@@ -1124,7 +1127,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Modelo para impressão</value>
   </data>
   <data name="global_ConfigurationPrintersTemplates" xml:space="preserve">
-    <value>Modelos de Impressão </value>
+    <value>Modelos de Impressão</value>
   </data>
   <data name="global_ConfigurationPrintersType" xml:space="preserve">
     <value>Tipos de impressora</value>
@@ -1328,7 +1331,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Tipos de documentos</value>
   </data>
   <data name="global_documentfinance_type_report_invoice_footer_at" xml:space="preserve">
-    <value>Os bens/serviços foram colocados à disposição do adquirente na data do documento</value>
+    <value>Os artigos faturados foram colocados à exposição do cliente nesta data - Alinea f) do n.5 do art. 36 do CIVA</value>
   </data>
   <data name="global_documentfinance_type_report_non_invoice_footer_at" xml:space="preserve">
     <value>Este documento não serve de fatura</value>
@@ -1349,7 +1352,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Fatura-Recibo</value>
   </data>
   <data name="global_documentfinance_type_title_fs" xml:space="preserve">
-    <value>Venda a Dinheiro</value>
+    <value>Fatura Simplificada</value>
   </data>
   <data name="global_documentfinance_type_title_ft" xml:space="preserve">
     <value>Fatura</value>
@@ -1406,10 +1409,10 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used in Report Label</comment>
   </data>
   <data name="global_documentfinance_years" xml:space="preserve">
-    <value>Abertura de ano fiscal </value>
+    <value>Abertura de ano fiscal</value>
   </data>
   <data name="global_documentfinance_yearsseriesterminal" xml:space="preserve">
-    <value>Séries/Terminal </value>
+    <value>Séries/Terminal</value>
   </data>
   <data name="global_documents" xml:space="preserve">
     <value>Informação fiscal</value>
@@ -1703,7 +1706,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Outras Tabelas</value>
   </data>
   <data name="global_password" xml:space="preserve">
-    <value>Palavra-chave</value>
+    <value>Palavra-Passe</value>
   </data>
   <data name="global_payment_condition" xml:space="preserve">
     <value>Condições de Pagamento</value>
@@ -1830,7 +1833,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Impresso</value>
   </data>
   <data name="global_printed_on_date" xml:space="preserve">
-    <value>A data de emissão</value>
+    <value>Impresso em</value>
   </data>
   <data name="global_printers" xml:space="preserve">
     <value>Impressoras</value>
@@ -1965,7 +1968,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Ativo</value>
   </data>
   <data name="global_record_main_detail" xml:space="preserve">
-    <value>Detalhes </value>
+    <value>Detalhes</value>
   </data>
   <data name="global_record_main_properties" xml:space="preserve">
     <value>Propriedades</value>
@@ -2010,6 +2013,10 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>{0} por programa certificado Nº {1}/AT</value>
     <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
   </data>
+  <data name="global_report_overlay_software_certification_ao" xml:space="preserve">
+    <value>{0} por programa validado Nº {1}/AGT/{3}/LogicPOS</value>
+    <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
+  </data>
   <data name="global_report_overlay_software_certification_emitted" xml:space="preserve">
     <value>Emitido</value>
     <comment>This key is used for software certification label in invoices and the value for this key has specific purposes in different countries. Please pay attention on changes</comment>
@@ -2041,7 +2048,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Mesa reservada</value>
   </data>
   <data name="global_reset_password" xml:space="preserve">
-    <value>Reset de palava-chave</value>
+    <value>Reset de palavra-passe</value>
   </data>
   <data name="global_second_copy" xml:space="preserve">
     <value>Segunda via</value>
@@ -2086,7 +2093,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
   </data>
   <data name="global_ship_to_delivery_date_report" xml:space="preserve">
     <value>Data da Entrega</value>
-    <comment>Data da entrega</comment>
+    <comment>Data da Entrega</comment>
   </data>
   <data name="global_ship_to_delivery_id" xml:space="preserve">
     <value>Identificador da Entrega</value>
@@ -2120,9 +2127,6 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
   </data>
   <data name="global_source_finance_document" xml:space="preserve">
     <value>Documento de Origem</value>
-  </data>
-  <data name="global_source_document_NC_ND" xml:space="preserve">
-    <value>Anulação ou rectificação do documento de origem</value>
   </data>
   <data name="global_split_account" xml:space="preserve">
     <value>Dividir conta</value>
@@ -2231,7 +2235,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Total Débito</value>
   </data>
   <data name="global_total_deliver" xml:space="preserve">
-    <value>Total Entregue</value>
+    <value>Total entregue</value>
   </data>
   <data name="global_total_discount_acronym" xml:space="preserve">
     <value>T.Dsc</value>
@@ -2255,7 +2259,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>"Item total with tax" label for documents</comment>
   </data>
   <data name="global_total_price_to_pay" xml:space="preserve">
-    <value>Total a Pagar</value>
+    <value>Total a pagar</value>
   </data>
   <data name="global_total_stock" xml:space="preserve">
     <value>Total Stock</value>
@@ -2346,7 +2350,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Nome</value>
   </data>
   <data name="global_user_password" xml:space="preserve">
-    <value>Password</value>
+    <value>Palavra-Passe</value>
   </data>
   <data name="global_user_permissions" xml:space="preserve">
     <value>Permissões</value>
@@ -2391,7 +2395,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <value>Imposto na mesa</value>
   </data>
   <data name="global_vat_rate" xml:space="preserve">
-    <value>Taxa </value>
+    <value>Taxa</value>
   </data>
   <data name="global_vat_rates" xml:space="preserve">
     <value>Taxas de imposto</value>
@@ -2499,7 +2503,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_14" xml:space="preserve">
-    <value>Quatorze</value>
+    <value>Catorze</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_15" xml:space="preserve">
@@ -2507,11 +2511,11 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_16" xml:space="preserve">
-    <value>Dezesseis</value>
+    <value>Dezasseis</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_17" xml:space="preserve">
-    <value>Dezessete</value>
+    <value>Dezassete</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_18" xml:space="preserve">
@@ -2519,7 +2523,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_19" xml:space="preserve">
-    <value>Dezenove</value>
+    <value>Dezanove</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_2" xml:space="preserve">
@@ -2635,11 +2639,11 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_space_billions_and" xml:space="preserve">
-    <value> Bilhões e</value>
+    <value> Biliões e</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_space_billion_and" xml:space="preserve">
-    <value> Bilhão e</value>
+    <value> Bilião e</value>
     <comment>Used for writing out the document values into words</comment>
   </data>
   <data name="numbers_to_words_space_hundred_and_space" xml:space="preserve">
@@ -2693,7 +2697,7 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
     <comment>Used in 800x600 Theme</comment>
   </data>
   <data name="pos_button_label_change_table" xml:space="preserve">
-    <value>Mudar mesa</value>
+    <value>Mudar pedido</value>
   </data>
   <data name="pos_button_label_change_table_small" xml:space="preserve">
     <value>Mudar M.</value>
@@ -2832,16 +2836,16 @@ Prima "Sim" para continuar e fechar os terminais, ou prima "Não", feche o(s) te
 Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</value>
   </data>
   <data name="pos_pinpad_message_type_new_password" xml:space="preserve">
-    <value>Introduza a nova palavra-chave</value>
+    <value>Introduza a nova palavra-passe</value>
   </data>
   <data name="pos_pinpad_message_type_new_password_confirm" xml:space="preserve">
-    <value>Confirme a nova palavra-chave</value>
+    <value>Confirme a nova palavra-passe</value>
   </data>
   <data name="pos_pinpad_message_type_old_password" xml:space="preserve">
-    <value>Introduza a palavra-chave antiga</value>
+    <value>Introduza a palavra-passe antiga</value>
   </data>
   <data name="pos_pinpad_message_type_password" xml:space="preserve">
-    <value>Introduza a palavra-chave</value>
+    <value>Introduza a palavra-passe</value>
   </data>
   <data name="pos_ticketlist_label_designation" xml:space="preserve">
     <value>Designação</value>
@@ -3001,7 +3005,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Serviço da Autoridade Tributária :: Account Fiscal Number</value>
   </data>
   <data name="prefparam_service_at_production_account_password" xml:space="preserve">
-    <value>Serviço da Autoridade Tributária :: Account Password</value>
+    <value>Serviço da Autoridade Tributária :: Palavra-Passe da Conta</value>
   </data>
   <data name="prefparam_service_at_production_mode_enabled" xml:space="preserve">
     <value>Serviço da Autoridade Tributária :: Modo de Produção Activo</value>
@@ -3291,7 +3295,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Abra a sessão/caixa para iniciar</value>
   </data>
   <data name="status_message_pin_error" xml:space="preserve">
-    <value>Palavra-chave errada!</value>
+    <value>Palavra-passe errada!</value>
   </data>
   <data name="status_message_select_order_or_table_appmode_default" xml:space="preserve">
     <value>Selecione Mesa Para Dar Início ao Trabalho</value>
@@ -3397,7 +3401,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Entrada de Texto</value>
   </data>
   <data name="window_title_dialog_already_paid" xml:space="preserve">
-    <value>Artigo pago</value>
+    <value>Ticket pago</value>
   </data>
   <data name="window_title_dialog_already_exited" xml:space="preserve">
     <value>Saida de Ticket</value>
@@ -3412,7 +3416,7 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Caixa :: Total em Caixa: {0}</value>
   </data>
   <data name="window_title_dialog_change_password" xml:space="preserve">
-    <value>Alterar palavra-chave</value>
+    <value>Alterar palavra-passe</value>
   </data>
   <data name="window_title_dialog_change_user" xml:space="preserve">
     <value>Mudar de utilizador</value>
@@ -3628,10 +3632,10 @@ Por motivos de segurança, para prosseguir tem que alterar a palavra-passe!</val
     <value>Editar cliente</value>
   </data>
   <data name="window_title_edit_customerdiscountgroup" xml:space="preserve">
-    <value>Editar descontos </value>
+    <value>Editar descontos</value>
   </data>
   <data name="window_title_edit_customertype" xml:space="preserve">
-    <value>Editar tipos de clientes </value>
+    <value>Editar tipos de clientes</value>
   </data>
   <data name="window_title_edit_dialogconfigurationprinters" xml:space="preserve">
     <value>Impressoras</value>
@@ -3760,11 +3764,11 @@ Por favor, insira outro número e tente novamente.</value>
   <data name="prefparam_use_ccdailyticket" xml:space="preserve">
     <value>Ticket :: Imprimir detalhes da conta corrente no ticket de movimentos diários ou de sessão</value>
   </data>
-  <data name="global_report_overlay_software_certification_ao" xml:space="preserve">
-    <value>{0} por programa validado Nº {1}/AGT/{3}/LogicPOS</value>
+  <data name="dialog_edit_article_tab4_label1" xml:space="preserve">
+    <value>Artigos Associados</value>
   </data>
-  <data name="dialog_button_label_new_client" xml:space="preserve">
-    <value>Novo Cli.</value>
+  <data name="global_composite_article" xml:space="preserve">
+    <value>Artigo Composto</value>
   </data>
   <data name="dialog_message__pos_order_cancel" xml:space="preserve">
     <value>Tem a certeza que deseja cancelar o pedido atual?</value>
